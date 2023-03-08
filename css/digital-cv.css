@@ -1,0 +1,29 @@
+.number {
+  width: 48px;
+  height: 48px;
+  background-color: rgb(189, 139, 237);
+}
+.border-dotted {
+  border-style: dotted;
+
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+.container {
+  width: 100% !important;
+}
+
+i {
+  font-size: 32px;
+}
+@media (max-width: 992px) {
+  .goals,
+  .scopes,
+  .team,
+  .timeline,
+  .primary {
+    height: auto !important;
+    background-color: aqua !important;
+  }
+}

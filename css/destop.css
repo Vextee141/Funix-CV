@@ -1,0 +1,328 @@
+/*Border có mã màu là #d6c08d*/
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  margin: 20px auto;
+  width: 100%;
+}
+.bg-grey {
+  background: #f7f7f7;
+}
+
+section .container {
+  margin: auto;
+}
+h1 {
+  margin-bottom: 12px;
+}
+/*Nav bar*/
+/* Tạo màu cho Icon*/
+#nav-bar i {
+  color: rgb(5, 126, 218);
+}
+
+nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+a:link,
+a:visited {
+  color: black;
+}
+/*Phần nâng cao: Tạo ảnh đại diện chồng lên các phần khác*/
+.avatar {
+  height: 160px;
+  width: 148px;
+  border: 5px solid white;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  z-index: 1;
+  padding: none;
+}
+/*Banner*/
+#banner {
+  height: 400px;
+  background-size: cover;
+  color: rgb(201, 201, 201);
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.596),
+      rgba(56, 55, 55, 0.605)
+    ),
+    url("../images/banner.jpg");
+  position: relative;
+}
+/* Định dạng và bố trí các dòng text trên banner*/
+.banner-text {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  align-items: center;
+  padding-top: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+/* Định dạng dòng chữ dưới Họ và tên trên banner */
+.banner-text span {
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+/*Tạo màu phân biệt cho 2 khối */
+#about .container div:last-child {
+  background-color: rgba(169, 168, 168, 0.094);
+}
+#personal-info::after {
+  content: "";
+  position: absolute;
+  width: 500%;
+  height: 100%;
+  /* color: #057eda; */
+  background-color: rgba(169, 168, 168, 0.094);
+  left: 100%;
+  top: 0;
+}
+#about h1 {
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 32px;
+}
+#about p,
+#about ul {
+  line-height: 1.8;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 24px;
+}
+
+#personal-info i {
+  color: #057eda;
+}
+
+/*Tạo các chấm tròn trước đầu mục*/
+#job-info .bold::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #f7f7f7;
+  background-color: #057eda;
+  z-index: 1;
+  position: absolute;
+  transform: translate(-130%, 50%);
+}
+#job-info .bold {
+  font-size: 18px;
+}
+#job-info .section-content {
+  margin-left: 18px;
+}
+#job-info h1 {
+  font-size: 32px;
+  font-weight: lighter;
+}
+#job-info ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 12px;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.591);
+}
+/* Tạo dấu gạch ngang trước đầu mục danh sách*/
+#job-info ul li:before {
+  content: "\2011";
+  position: absolute;
+  margin-left: -12px;
+}
+.grid-item {
+  margin-top: 0 !important;
+}
+.grid-item header {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  align-items: center;
+  margin-bottom: 48px;
+}
+/* Định dạng icons*/
+header i {
+  width: 24px;
+  /* background-color: #057eda; */
+  scale: 3.5;
+  justify-self: end;
+  margin-right: 18px;
+  color: rgba(33, 33, 33, 0.237);
+}
+
+#job-info .section-content div {
+  /* background-color: #48a1e6; */
+  margin-bottom: 32px;
+}
+
+.period {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.514);
+  margin-top: 4px;
+}
+/*Định dạng chữ 'Hiện tại' */
+.period span {
+  font-style: italic;
+  font-weight: lighter;
+  background-color: #48a1e6;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+/* Tạo bố cục cho phần sở thích*/
+.hobby-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* border: 3px solid black; */
+  justify-content: center;
+  align-items: center;
+  width: 105%;
+}
+.hobby-flex {
+  display: flex;
+  flex-direction: column;
+  /* border: 3px solid black; */
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+/*Định dạng và bố trí các Icon*/
+.hobby-flex i {
+  height: 50px;
+  width: 50px;
+  border: 2px solid #057eda6e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #057eda5d;
+  padding: 0;
+  margin: 0;
+}
+.hobby-flex p {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  color: #1f1f1f8f;
+}
+/*Tạo các thạnh cấp độ chuyên môn*/
+.bars {
+  display: flex;
+  margin-bottom: 24px;
+  margin-top: 12px;
+}
+
+.bar {
+  width: 56px;
+  height: 4px;
+  background-color: #4f4f4f25;
+  margin-right: 10px;
+}
+.bar.level {
+  background-color: #48a1e6;
+}
+/*Certificate*/
+#certificate {
+  padding: 0 96px;
+}
+#certificate h1 {
+  padding: 24px 0;
+  font-weight: lighter;
+}
+.certificate h2 {
+  font-size: 14px;
+  font-weight: lighter;
+  color: rgba(0, 0, 0, 0.952);
+}
+.certificate ul {
+  list-style: none;
+  margin-top: 12px;
+  padding-left: 12px;
+  color: rgba(53, 53, 53, 0.607);
+}
+/*Tạo dấu gạch ngang trước các đầu mục danh sách*/
+.certificate ul li:before {
+  content: "\2011";
+  position: absolute;
+  margin-left: -12px;
+}
+
+.project-description {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.646);
+  display: grid;
+  grid-template-columns: 30% 70%;
+  /* padding: 12px 0px; */
+  align-items: left;
+  justify-content: center;
+}
+/*Định dạng và bố cục thanh trong dự án*/
+.project-bar {
+  padding-top: 12px;
+
+  gap: 5px;
+}
+.project h3 {
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+.project-bar span,
+.project-bar i {
+  font-weight: lighter;
+  color: rgba(0, 0, 0, 0.648);
+}
+/*Định dạng các năm trong dự án*/
+.year {
+  display: flex;
+  background-color: #48a1e6;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: white !important;
+  width: fit-content;
+  padding: 3px 6px;
+}
+
+#project h1 {
+  font-weight: 100;
+}
+/*Footer*/
+#footer .container {
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  margin-bottom: 96px;
+  height: 78px;
+  align-items: center;
+  gap: 32px;
+}
+/* định dạng các icon */
+.contact i {
+  display: inline-block;
+  scale: 1.5;
+  /* background-color: #48a1e6; */
+  padding: 50px;
+  margin: 0;
+  padding: 0;
+  color: #3395e0;
+}
+.contact span {
+  font-weight: lighter;
+  color: #32323285;
+}
+/*bỏ gạch chân ở link*/
+.contact a {
+  text-decoration: none;
+}
